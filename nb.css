@@ -1,0 +1,72 @@
+/* Stylo pitch decks — "Lab Notebook" style (05). Tokens from the Stylo Design System. */
+@font-face { font-family: "Inter"; src: url("assets/fonts/Inter-Variable.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "JetBrains Mono"; src: url("assets/fonts/JetBrainsMono-Variable.ttf") format("truetype"); font-weight: 100 800; }
+@font-face { font-family: "Patrick Hand"; src: url("assets/fonts/hand/PatrickHand-Regular.ttf") format("truetype"); }
+
+:root {
+  --navy: #0B1833; --green: #16A36A; --green-deep: #087A4C; --green-light: #EAF8F1;
+  --blue: #2475F5; --blue-deep: #1555C0; --blue-light: #EDF4FF;
+  --slate: #667085; --mist: #F7F8FA; --hairline: #E5E7EB;
+  --amber: #9A5B07; --amber-light: #FFF6E5; --red: #B42318; --red-light: #FEF0F0;
+  --ink: #1C64D8;        /* blue ballpoint, handwriting only */
+  --redpen: #B42318;     /* red pen, problems only */
+  --hl: #9FE0BF;         /* green highlighter */
+  --hl-blue: #BBD5FF;    /* brAIn highlighter */
+  --paper: #F6FBF8; --grid: #D6EEE1; --grid-fine: #E8F5EE; --margin: #F2A3A3;
+  --sans: "Inter", "Segoe UI", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+  --hand: "Patrick Hand", "Noteworthy", cursive;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--sans); color: var(--navy); -webkit-font-smoothing: antialiased; }
+
+.slide {
+  width: 1920px; height: 1080px; position: relative; overflow: hidden;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--grid) 1.5px, transparent 1.5px),
+    linear-gradient(var(--grid-fine) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-fine) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+}
+.slide.a4 { width: 1588px; height: 2246px; }
+.slide .margin { position: absolute; left: 96px; top: 0; bottom: 0; width: 3px; background: var(--margin); }
+.slide.a4 .margin { left: 80px; }
+
+/* page furniture */
+.logo { position: absolute; left: 150px; top: 60px; height: 44px; }
+.pg { position: absolute; right: 120px; top: 70px; font-family: var(--mono); font-size: 18px; letter-spacing: .1em; color: var(--slate); }
+.foot { position: absolute; left: 150px; bottom: 36px; font-family: var(--mono); font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: var(--slate); }
+.kick { position: absolute; left: 150px; top: 150px; font-family: var(--mono); font-size: 19px; letter-spacing: .09em; text-transform: uppercase; color: var(--green-deep); font-weight: 600; }
+.h { position: absolute; left: 142px; letter-spacing: -0.045em; line-height: 1.0; }
+.h .l { font-weight: 300; } .h .b { font-weight: 900; }
+
+.label { font-family: var(--mono); font-size: 16px; letter-spacing: .09em; text-transform: uppercase; font-weight: 600; }
+.source { font-family: var(--mono); font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--slate); }
+.mono { font-family: var(--mono); }
+.hand { font-family: var(--hand); color: var(--ink); line-height: 1.12; }
+.hand.red { color: var(--redpen); }
+.hl { background: linear-gradient(transparent 54%, var(--hl) 54%, var(--hl) 92%, transparent 92%); padding: 0 6px; margin: 0 -6px; }
+.hl.blue { background: linear-gradient(transparent 54%, var(--hl-blue) 54%, var(--hl-blue) 92%, transparent 92%); }
+.slot { color: var(--green-deep); border-bottom: 3px dashed var(--green); }
+b, strong { font-weight: 800; }
+
+.abs { position: absolute; }
+.taped { position: absolute; background: #fff; padding: 12px; border: 1.5px solid #D5DAE1; box-shadow: 0 2px 0 #D5DAE1; }
+.taped img { display: block; width: 100%; border-radius: 8px; }
+.tape { position: absolute; width: 140px; height: 40px; background: #F4E7A6; opacity: .92; border: 1px solid #E5D58A; }
+.card { position: absolute; background: #fff; border: 1.5px solid #D5DAE1; box-shadow: 0 2px 0 #D5DAE1; }
+.stamp { position: absolute; border: 6px double currentColor; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 900; text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
+.stamp small { font-family: var(--mono); font-size: 14px; letter-spacing: .12em; font-weight: 700; }
+.stamp.rect { border-radius: 12px; padding: 8px 22px; border-width: 6px; border-style: solid; }
+.sample { position: absolute; font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; background: #fff; color: var(--slate); border: 1.5px solid var(--hairline); border-radius: 4px; padding: 4px 8px; }
+.ring { position: absolute; }
+
+/* print: one slide per page */
+@media print {
+  body { background: none; }
+  .slide { margin: 0 !important; break-after: page; page-break-after: always; transform: none !important; }
+  .deckbar { display: none !important; }
+}
+@media print { .slide:last-of-type { break-after: auto; page-break-after: auto; } }
