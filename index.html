@@ -33,40 +33,75 @@
   .btns a.go { background:#0D8755; border-color:#0D8755; color:#fff; }
   .notes { background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px 24px; font-size:15px; line-height:1.6; color:#344054; }
   .notes b { color:var(--navy); }
+  .seg { display:inline-flex; border:1.5px solid #D0D5DD; border-radius:999px; padding:4px; background:#fff; margin-top:22px; }
+  .seg button { font:600 15px Inter, system-ui, sans-serif; border:0; background:transparent; color:#475467; border-radius:999px; padding:9px 18px; cursor:pointer; }
+  .seg button[aria-pressed="true"] { background:var(--navy); color:#fff; }
+  .seg .k { font-family:"JetBrains Mono", monospace; font-size:12px; opacity:.75; margin-right:8px; }
+  .seg-note { font-size:14px; color:var(--slate); margin-top:10px; }
   footer { padding:24px 0 56px; color:var(--slate); font-size:14px; line-height:1.6; }
   footer a { color:var(--deep); }
   @media (max-width:820px) { .piece { grid-template-columns:1fr; } }
 </style></head>
 <body>
-<header><div class="wrap"><img src="assets/brand/stylo-colour.svg" alt="Stylo"><span class="mono">Pitch decks · Lab Notebook</span></div></header>
+<header><div class="wrap"><img src="assets/brand/stylo-colour.svg" alt="Stylo"><span class="mono" id="hdr">Pitch decks · 05 Notebook</span></div></header>
 <main class="wrap">
   <section class="intro">
     <h1><span>Three pieces.</span><b>Ready to send.</b></h1>
     <p>A one-page overview of everything Stylo covers, and two 8-page pitch decks: one for chemical, FMCG and food plants, one for pharma plants. Open any of them in the browser and press Present, or download the PDF or the Canva-editable PPTX.</p>
+    <div class="seg" role="group" aria-label="Style"><button type="button" data-st="05"><span class="k">05</span>Notebook</button><button type="button" data-st="01"><span class="k">01</span>Plant</button></div>
+    <div class="seg-note">Both styles carry the same words. The switch changes the previews, the deck links and the downloads below.</div>
   </section>
 
   <section class="piece">
-    <div class="th"><a href="one-pager/"><img src="img/thumb-one-a4.jpg" alt="What Stylo covers, A4" style="aspect-ratio:1588/2246; object-fit:cover;"></a><a href="one-pager/slide.html" style="flex:1.6; align-self:center;"><img src="img/thumb-one-slide.jpg" alt="What Stylo covers, slide"></a></div>
+    <div class="th"><a href="one-pager/" data-view="one-pager/"><img src="img/thumb-one-a4.jpg" data-base="img/thumb-one-a4" alt="What Stylo covers, A4" style="aspect-ratio:1588/2246; object-fit:cover;"></a><a href="one-pager/slide.html" data-view="one-pager/slide.html" style="flex:1.6; align-self:center;"><img src="img/thumb-one-slide.jpg" data-base="img/thumb-one-slide" alt="What Stylo covers, slide"></a></div>
     <div><div class="n">01 · One page</div><h2>What Stylo covers</h2>
       <p>Every Stylo Business product and brAIn on one page, with the industries and the three ways to start. As an A4 leave-behind and as one 16:9 slide.</p>
-      <div class="btns"><a class="go" href="one-pager/">View A4</a><a href="one-pager/slide.html">View slide</a><a href="downloads/Stylo-What-Stylo-Covers-A4.pdf" download>PDF · A4</a><a href="downloads/Stylo-What-Stylo-Covers-Slide.pdf" download>PDF · slide</a><a href="downloads/Stylo-What-Stylo-Covers-A4-Canva.pptx" download>Canva · A4</a><a href="downloads/Stylo-What-Stylo-Covers-Slide-Canva.pptx" download>Canva · slide</a></div></div>
+      <div class="btns"><a class="go" href="one-pager/" data-view="one-pager/">View A4</a><a href="one-pager/slide.html" data-view="one-pager/slide.html">View slide</a><a href="downloads/Stylo-What-Stylo-Covers-A4.pdf" data-dl="Stylo-What-Stylo-Covers-A4.pdf" download>PDF · A4</a><a href="downloads/Stylo-What-Stylo-Covers-Slide.pdf" data-dl="Stylo-What-Stylo-Covers-Slide.pdf" download>PDF · slide</a><a href="downloads/Stylo-What-Stylo-Covers-A4-Canva.pptx" data-dl="Stylo-What-Stylo-Covers-A4-Canva.pptx" download>Canva · A4</a><a href="downloads/Stylo-What-Stylo-Covers-Slide-Canva.pptx" data-dl="Stylo-What-Stylo-Covers-Slide-Canva.pptx" download>Canva · slide</a></div></div>
   </section>
 
   <section class="piece">
-    <div class="th"><a href="process/"><img src="img/thumb-process.jpg" alt="Manufacturing deck"></a></div>
+    <div class="th"><a href="process/" data-view="process/"><img src="img/thumb-process.jpg" data-base="img/thumb-process" alt="Manufacturing deck"></a></div>
     <div><div class="n">02 · 8 pages</div><h2>Manufacturing deck</h2>
       <p>For chemical, FMCG and food plants. Recall-ready in 90 days: trace every lot, cost every batch, ask brAIn. Ends on the traceability-check offer and the outcomes.</p>
-      <div class="btns"><a class="go" href="process/">View deck</a><a href="downloads/Stylo-Process-Manufacturing-Deck.pdf" download>PDF</a><a href="downloads/Stylo-Process-Manufacturing-Deck-Canva.pptx" download>Canva PPTX</a></div></div>
+      <div class="btns"><a class="go" href="process/" data-view="process/">View deck</a><a href="downloads/Stylo-Process-Manufacturing-Deck.pdf" data-dl="Stylo-Process-Manufacturing-Deck.pdf" download>PDF</a><a href="downloads/Stylo-Process-Manufacturing-Deck-Canva.pptx" data-dl="Stylo-Process-Manufacturing-Deck-Canva.pptx" download>Canva PPTX</a></div></div>
   </section>
 
   <section class="piece">
-    <div class="th"><a href="pharma/"><img src="img/thumb-pharma.jpg" alt="Pharma deck"></a></div>
+    <div class="th"><a href="pharma/" data-view="pharma/"><img src="img/thumb-pharma.jpg" data-base="img/thumb-pharma" alt="Pharma deck"></a></div>
     <div><div class="n">03 · 8 pages</div><h2>Pharma deck</h2>
       <p>For pharma plants under revised Schedule M. Audit-ready in 90 days: compliance built in, gate to truck in one flow, brAIn on top. Ends on the gap-check offer and the outcomes.</p>
-      <div class="btns"><a class="go" href="pharma/">View deck</a><a href="downloads/Stylo-Pharma-Deck.pdf" download>PDF</a><a href="downloads/Stylo-Pharma-Deck-Canva.pptx" download>Canva PPTX</a></div></div>
+      <div class="btns"><a class="go" href="pharma/" data-view="pharma/">View deck</a><a href="downloads/Stylo-Pharma-Deck.pdf" data-dl="Stylo-Pharma-Deck.pdf" download>PDF</a><a href="downloads/Stylo-Pharma-Deck-Canva.pptx" data-dl="Stylo-Pharma-Deck-Canva.pptx" download>Canva PPTX</a></div></div>
   </section>
 
   <section class="notes"><b>Before sending:</b> fill the slots in [brackets]: client name, month, phone number, the gap-check cost, time and report days, and the team names, roles and photos. Screens are real Stylo screens with sample data. Every outside figure carries its source on the page.</section>
 </main>
 <footer class="wrap"><a href="styles/">See the five style options</a> · Design proof by Busy Fox.</footer>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), st = q.get('style');
+  try { if (!st) st = localStorage.getItem('styloStyle'); } catch (e) {}
+  st = st === '01' ? '01' : '05';
+  function apply() {
+    document.querySelectorAll('.seg button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.st === st)); });
+    document.getElementById('hdr').textContent = 'Pitch decks · ' + (st === '01' ? '01 Plant' : '05 Notebook');
+    document.querySelectorAll('img[data-base]').forEach(function (i) { i.src = i.dataset.base + (st === '01' ? '-01' : '') + '.jpg'; });
+    document.querySelectorAll('a[data-view]').forEach(function (a) { a.href = a.dataset.view + (st === '01' ? '?style=01' : ''); });
+    document.querySelectorAll('a[data-dl]').forEach(function (a) {
+      var f = a.dataset.dl;
+      a.href = 'downloads/' + (st === '01' ? f.replace(/(-Canva)?\.(pdf|pptx)$/, '-Plant$1.$2') : f);
+    });
+  }
+  document.querySelectorAll('.seg button').forEach(function (b) {
+    b.onclick = function () {
+      st = b.dataset.st;
+      try { localStorage.setItem('styloStyle', st); } catch (e) {}
+      var u = new URL(location.href);
+      if (st === '01') u.searchParams.set('style', '01'); else u.searchParams.delete('style');
+      history.replaceState(null, '', u);
+      apply();
+    };
+  });
+  apply();
+})();
+</script>
 </body></html>

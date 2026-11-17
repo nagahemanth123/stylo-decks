@@ -70,3 +70,5 @@ b, strong { font-weight: 800; }
   .deckbar { display: none !important; }
 }
 @media print { .slide:last-of-type { break-after: auto; page-break-after: auto; } }
+.hand { font-size: var(--fs, 1em); }
+.iso-only { display: none !important; }

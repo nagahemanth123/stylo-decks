@@ -1,0 +1,28 @@
+/* Style 01 · Isometric Plant. Same pages and words as 05; html.s01 swaps the look. */
+html.s01 .iso-only { display: block !important; }
+html.s01 .nb-only, html.s01 .pen, html.s01 .tape, html.s01 .stamp, html.s01 .slide .margin { display: none !important; }
+html.s01 .slide { background: var(--green-light); background-image: none; }
+html.s01 .hl { background: none; padding: 0; margin: 0; color: var(--green); }
+html.s01 .h .hl { color: var(--green); }
+html.s01 p .hl b, html.s01 p .hl { color: var(--green-deep); }
+/* captions instead of handwriting */
+html.s01 .hand { font-family: var(--sans); font-weight: 800; letter-spacing: -0.02em; color: var(--green-deep); transform: none !important; font-size: calc(var(--fs, 32px) * .7); line-height: 1.16; }
+html.s01 .hand.red { color: var(--red); }
+html.s01 .pillar .goal { font-size: 23px; color: var(--green-deep); }
+html.s01 .pillar.ai .goal { color: var(--blue-deep); }
+html.s01 .slip .v.hand { font-family: var(--mono); font-weight: 500; color: var(--slate); font-size: 30px; letter-spacing: 0; }
+/* cards: white, navy line, round corners */
+html.s01 .taped { transform: none !important; border: 2px solid var(--navy); border-radius: 14px; box-shadow: none; padding: 14px; }
+html.s01 .taped img { border-radius: 8px; border: 1.5px solid var(--hairline); }
+html.s01 .card, html.s01 .ai { border: 2px solid var(--navy); border-radius: 14px; box-shadow: none; }
+html.s01 .pillar.biz { border-top: 8px solid var(--green); }
+html.s01 .pillar.ai, html.s01 .ai { border-top: 8px solid var(--blue); }
+html.s01 .tile { border: 2px solid var(--navy); border-top: 6px solid var(--green); border-radius: 12px; box-shadow: none; }
+html.s01 .pol { transform: none !important; border: 2px solid var(--navy); border-radius: 14px; box-shadow: none; }
+html.s01 .pol .ph { border: 0; border-radius: 8px; background: var(--green-light); }
+html.s01 .pol .nm { font-family: var(--sans); font-weight: 800; color: var(--navy); font-size: 24px; }
+html.s01 .slip { border: 2px solid var(--navy); border-radius: 14px; }
+html.s01 .isocard { position: absolute; background: #fff; border: 2px solid var(--navy); border-radius: 14px; }
+html.s01 .cmp .us { background: #fff; }
+html.s01 .why .it, html.s01 .pillar li, html.s01 .prod, html.s01 .way, html.s01 .sec .row { border-bottom-color: #CFE9DC; }
+html.s01 .sample { background: #fff; }
