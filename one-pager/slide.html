@@ -6,46 +6,91 @@
 <link rel="stylesheet" href="../nb.css">
 <script>try{var q=new URLSearchParams(location.search),s=q.get("style")||(q.has("raw")?null:localStorage.getItem("styloStyle"));if(s==="01")document.documentElement.classList.add("s01");}catch(e){}</script>
 <link rel="stylesheet" href="../iso.css">
+<link rel="stylesheet" href="story.css">
 <style>
-  .tile { position: absolute; width: 238px; height: 238px; background: #fff; border: 1.5px solid #D5DAE1; box-shadow: 0 2px 0 #D5DAE1; padding: 20px 20px; border-top: 6px solid var(--green); }
-  .tile img { width: 60px; height: 60px; }
-  .tile h3 { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; margin-top: 12px; line-height: 1.1; }
-  .tile p { font-size: 18px; line-height: 1.32; margin-top: 6px; color: #243049; }
-  .ai { position: absolute; background: #fff; border: 1.5px solid #D5DAE1; box-shadow: 0 2px 0 #D5DAE1; border-top: 8px solid var(--blue); }
-  .tag { display: inline-block; font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; padding: 4px 8px; border-radius: 4px; }
+  .step { font-size: 16px; gap: 12px; }
+  .step .sn { width: 32px; height: 32px; font-size: 15px; }
+  .bub { font-size: 22px; width: 330px; height: 88px; padding: 12px 22px; }
+  .hub .nm { font-size: 38px; margin-top: 2px; }
+  .hub .tg { font-size: 11px; margin-top: 6px; }
+  .mod { width: 104px; top: 768px; }
+  .mod img { width: 56px; height: 56px; }
+  .mod h3 { font-size: 18px; margin-top: 8px; white-space: nowrap; }
+  .mod p { font-size: 14px; line-height: 1.25; }
+  .pill { font-size: 12px; padding: 6px 14px; }
+  .out.row { left: 1340px; width: 430px; height: 98px; }
+  .out .ic { width: 60px; height: 60px; }
+  .out h3 { font-size: 23px; }
+  .out p { font-size: 16.5px; }
+  .chk-row { font-size: 21px; gap: 30px; }
+  .chk-row svg { width: 24px; height: 24px; }
+  .chk-row div { gap: 10px; }
 </style></head>
 <body data-pdf="../downloads/Stylo-What-Stylo-Covers-Slide.pdf" data-pptx="../downloads/Stylo-What-Stylo-Covers-Slide-Canva.pptx" data-pdf01="../downloads/Stylo-What-Stylo-Covers-Slide-Plant.pdf" data-pptx01="../downloads/Stylo-What-Stylo-Covers-Slide-Plant-Canva.pptx">
 <section class="slide">
   <div class="margin"></div>
+  <svg class="links" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute; left:0; top:0;"
+    data-links="b1@1,.5 > hub@c > navy | b2@1,.5 > hub@c > navy | b3@1,.5 > hub@c > navy |
+                hub@c > m1@.5,0 | hub@c > m2@.5,0 | hub@c > m3@.5,0 | hub@c > m4@.5,0 | hub@c > m5@.5,0 | hub@c > m6@.5,0 |
+                hub@c > o1@0,.5 | hub@c > o2@0,.5 | hub@c > o3@0,.5 | hub@c > o4@0,.5"></svg>
+  <svg class="iso-only scene" data-scene="mini" data-at="1640,150,13" width="1920" height="1080" viewBox="0 0 1920 1080" style="position:absolute; left:0; top:0;"></svg>
+
   <img class="logo" src="../assets/brand/stylo-colour.svg" alt="Stylo">
-  <div class="kick">What Stylo covers</div>
-  <div class="h" style="top:196px; font-size:100px;"><span class="l">One login.</span> <span class="b"><span class="hl">Your whole plant.</span></span></div>
-  <p class="abs" style="left:150px; top:322px; width:1600px; font-size:30px; line-height:1.35;">Production, quality, stock, sales, people and money on one database, with <b>brAIn</b> to answer any question across it.</p>
+  <div class="kick" style="top:140px;">What Stylo covers</div>
+  <div class="h" style="top:176px; font-size:80px;"><span class="l">One ERP for your plant.</span> <span class="b">Run by <span class="hl blue">brAIn.</span></span></div>
+  <p class="abs" style="left:150px; top:280px; width:1620px; font-size:27px; line-height:1.3;">Production, quality, stock, sales, people and money on one database. <b style="color:var(--blue-deep);">brAIn</b>, built in, can run the whole system.</p>
 
-  <div class="abs label" style="left:150px; top:404px; color:var(--green-deep);">Stylo Business · run the plant</div>
-  <div class="tile" style="left:150px; top:440px;"><img src="../assets/icons/stylo-bms.svg" alt=""><h3>Stylo BMS</h3><p>Batch records, QC and CoA, CAPA, change control</p></div>
-  <div class="tile" style="left:408px; top:440px;"><img src="../assets/icons/stylo-inventory.svg" alt=""><h3>Inventory</h3><p>Stock by lot and expiry, FIFO enforced, recalls</p></div>
-  <div class="tile" style="left:666px; top:440px;"><img src="../assets/icons/stylo-finance.svg" alt=""><h3>Finance</h3><p>Books, GST returns, e-invoice, e-way bill, costing</p></div>
-  <div class="tile" style="left:924px; top:440px;"><img src="../assets/icons/stylo-hrms.svg" alt=""><h3>HRMS</h3><p>Shifts, attendance, payroll with TDS, PF, ESI</p></div>
-  <div class="tile" style="left:150px; top:698px;"><img src="../assets/icons/stylo-crm.svg" alt=""><h3>CRM</h3><p>Leads, quotes, dealers, WhatsApp follow-ups</p></div>
-  <div class="tile" style="left:408px; top:698px;"><img src="../assets/icons/stylo-projects.svg" alt=""><h3>Projects</h3><p>Project jobs, custom BOMs, job costing</p></div>
-  <div class="tile" style="left:666px; top:698px;"><img src="../assets/icons/stylo-retail.svg" alt=""><h3>Retail</h3><p>Store billing and direct-to-customer sales</p></div>
-  <div class="hand abs" data-rot="-4" style="left:940px; top:760px; --fs:36px; transform:rotate(-4deg);">All on one<br>database ✓</div>
+  <!-- 1 · you ask -->
+  <div class="step" style="left:150px; top:362px;"><span class="sn">1</span>You ask</div>
+  <div class="you" style="left:150px; top:420px; width:84px; height:84px;"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#0B1833" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="16.5" r="8"/><path d="M9 41c1.6-8.6 7.6-13 15-13s13.4 4.4 15 13"/></svg></div>
+  <div class="you-l" style="left:150px; top:512px; width:84px; font-size:13px;">You</div>
+  <div class="bub left" id="b1" style="left:262px; top:408px;">Reorder anything below 30 days of stock.</div>
+  <div class="bub left" id="b2" style="left:262px; top:510px;">Send me the plant report every morning at 9.</div>
+  <div class="bub left" id="b3" style="left:262px; top:612px;">Which lots expire this month?</div>
+  <div class="hand bl abs" data-rot="-3" data-iso="left:160px; top:752px;" style="left:166px; top:740px; --fs:36px; transform:rotate(-3deg);">It doesn't just answer.<br>It does the work.</div>
 
-  <div class="abs label" style="left:1230px; top:404px; color:var(--blue-deep);">Stylo Intelligence · ask the plant</div>
-  <div class="ai" style="left:1230px; top:440px; width:570px; height:496px; padding:26px 30px;">
-    <div style="display:flex; align-items:center; gap:16px;"><img src="../assets/icons/stylo-brain.svg" alt="" style="width:64px; height:64px;"><span style="font-size:44px; font-weight:900; letter-spacing:-0.03em;">brAIn</span><span class="tag" style="background:var(--blue-light); color:var(--blue-deep);">Live now</span></div>
-    <div style="font-size:24px; line-height:1.38; margin-top:18px;">Ask in plain English. Answers from live data, with the source.</div>
-    <div style="font-size:20px; line-height:1.45; margin-top:14px; color:#243049;"><b>Works with</b> Stylo BMS, SAP B1, SAP HANA, Zoho and custom databases.</div>
-    <div style="font-size:20px; line-height:1.45; margin-top:10px; color:#243049;"><b>Read-only.</b> Runs on your premises or private cloud.</div>
-    <div class="hand" data-rot="-2" style="position:absolute; left:30px; top:318px; --fs:32px; transform:rotate(-2deg);">Try: "Which lots expire<br>this week?"</div>
-    <div class="mono" style="position:absolute; left:30px; bottom:24px; right:30px; font-size:14px; letter-spacing:.06em; color:var(--slate); line-height:1.5;">NEXT ON THE ROADMAP · STYLO MINI · STYLO PRO · AI OS · MODELS AND AGENTS</div>
+  <!-- 2 · brAIn -->
+  <div class="step bl" style="left:650px; top:362px;"><span class="sn">2</span><span class="bn">brAIn</span>does the work</div>
+  <div class="hub" id="hub" data-loop="40" style="left:846px; top:427px; width:196px; height:196px;"><img src="../assets/icons/stylo-brain.svg" alt="" style="width:66px; height:66px;"><div class="nm">brAIn</div><div class="tg">Built into Stylo</div></div>
+  <div class="rail" id="rail" style="left:624px; top:752px; width:640px; height:186px;"></div>
+  <div class="mod" style="left:625px;"><img id="m1" src="../assets/icons/stylo-bms.svg" alt=""><h3>Stylo BMS</h3><p>Batches, QC and CoA</p></div>
+  <div class="mod" style="left:732px;"><img id="m2" src="../assets/icons/stylo-inventory.svg" alt=""><h3>Inventory</h3><p>Stock by lot and expiry</p></div>
+  <div class="mod" style="left:839px;"><img id="m3" src="../assets/icons/stylo-finance.svg" alt=""><h3>Finance</h3><p>Books and GST</p></div>
+  <div class="mod" style="left:945px;"><img id="m4" src="../assets/icons/stylo-hrms.svg" alt=""><h3>HRMS</h3><p>Attendance and payroll</p></div>
+  <div class="mod" style="left:1052px;"><img id="m5" src="../assets/icons/stylo-crm.svg" alt=""><h3>CRM</h3><p>Leads, quotes, dealers</p></div>
+  <div class="mod" style="left:1159px;"><img id="m6" src="../assets/icons/stylo-projects.svg" alt=""><h3>Projects</h3><p>Job costing and BOMs</p></div>
+  <div class="pill g" style="left:644px; top:923px;">Six Stylo products · one database</div>
+
+  <!-- 3 · the work gets done -->
+  <div class="step" style="left:1340px; top:362px;"><span class="sn">3</span>The work gets done</div>
+  <div class="out row" id="o1" style="top:404px;">
+    <div class="ic"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="28" height="34" rx="4" stroke="#0B1833"/><path d="M18 8V5h12v3" stroke="#0B1833"/><path d="M16 20l3 3 6-6M16 32l3 3 6-6" stroke="#2475F5"/><path d="M29 21h4M29 33h4" stroke="#0B1833"/></svg></div>
+    <div><h3>Does the tasks</h3><p>POs, CoA drafts, e-invoices, payroll</p></div>
   </div>
+  <div class="out row" id="o2" style="top:512px;">
+    <div class="ic"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7v33h33" stroke="#0B1833"/><path d="M16 40v-8M24 40v-13M32 40v-6" stroke="#0B1833" stroke-width="4.5"/><path d="M14 24l8-7 7 4 11-11" stroke="#2475F5"/><path d="M33 10h7v7" stroke="#2475F5"/></svg></div>
+    <div><h3>Runs the analytics</h3><p>Yield, cost per batch, stock days</p></div>
+  </div>
+  <div class="out row" id="o3" style="top:620px;">
+    <div class="ic"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h14l9 9v25a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="#0B1833"/><path d="M28 6v9h9" stroke="#0B1833"/><path d="M18 24h12M18 30h12" stroke="#0B1833"/><path d="M18 36h7" stroke="#2475F5"/></svg></div>
+    <div><h3>Writes the reports</h3><p>Plant report each morning, MIS, GST</p></div>
+  </div>
+  <div class="out row" id="o4" style="top:728px;">
+    <div class="ic"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H20l-8 7v-7a4 4 0 0 1-4-4z" stroke="#0B1833"/><path d="M17 20h.01M24 20h.01M31 20h.01" stroke="#2475F5" stroke-width="4.8"/></svg></div>
+    <div><h3>Answers anything</h3><p>From live data, with the source</p></div>
+  </div>
+  <div class="hand bl abs" data-rot="-3" data-iso="left:1350px; top:858px;" style="left:1356px; top:850px; --fs:34px; transform:rotate(-3deg);">You approve.<br>brAIn does the rest ✓</div>
 
-  <div class="abs mono" style="left:150px; top:972px; font-size:17px; letter-spacing:.08em; color:var(--navy); text-transform:uppercase;">Built for &nbsp;✓ Pharma &nbsp;✓ Chemicals &nbsp;✓ FMCG and food &nbsp;✓ Engineering &nbsp;✓ Infra and EPC &nbsp;✓ Consulting</div>
-  <div class="abs" style="left:150px; top:1012px; font-size:24px; font-weight:800;">info@styloworld.io <span class="mono" style="font-size:18px; font-weight:500; color:var(--slate);">&nbsp;·&nbsp; styloworld.io &nbsp;·&nbsp; [+91 phone]</span></div>
+  <!-- footer -->
+  <div class="abs chk-row" style="left:150px; top:972px;"><span class="label" style="color:var(--green-deep); font-size:15px; align-self:center;">Built for manufacturers</span>
+    <div><svg data-flat viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="4" fill="#fff" stroke="#0B1833" stroke-width="2.5"/><path d="M9 21 l7 9 l17 -20" fill="none" stroke="#087A4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pharma</div>
+    <div><svg data-flat viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="4" fill="#fff" stroke="#0B1833" stroke-width="2.5"/><path d="M9 21 l7 9 l17 -20" fill="none" stroke="#087A4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>Chemicals</div>
+    <div><svg data-flat viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="4" fill="#fff" stroke="#0B1833" stroke-width="2.5"/><path d="M9 21 l7 9 l17 -20" fill="none" stroke="#087A4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>Engineering</div>
+  </div>
+  <div class="abs" style="left:150px; top:1016px; font-size:24px; font-weight:800;">info@styloworld.io <span class="mono" style="font-size:18px; font-weight:500; color:var(--slate);">&nbsp;·&nbsp; styloworld.io &nbsp;·&nbsp; [+91 phone]</span></div>
 </section>
 <script src="../iso.js"></script>
 <script src="../scenes.js"></script>
+<script src="story.js"></script>
 <script src="../deck.js"></script>
 </body></html>
